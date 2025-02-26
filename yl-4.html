@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#FFF5F2">
+    <title>深夜能量补给站</title>
+    <style>
+        /* 微信安全字体 */
+        :root {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.78;
+            color: #3A3A3C;
+        }
+
+        body {
+            background: linear-gradient(135deg, #FFF5F2 0%, #F8F9FF 100%);
+            padding: 20px 15px;
+            min-height: 100vh;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.92);
+            border-radius: 16px;
+            padding: 30px 25px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+            backdrop-filter: blur(12px);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes breath {
+            0% { transform: scale(0.98); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(0.98); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section {
+            padding: 25px;
+            margin: 20px 0;
+            background: linear-gradient(145deg, rgba(255,245,242,0.3), rgba(248,249,255,0.3));
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.5);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-3px);
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 14px;
+            background: linear-gradient(120deg, 
+                rgba(255,107,107,0.1) 0%,
+                rgba(255,212,184,0.1) 50%,
+                rgba(155,217,255,0.1) 100%);
+            z-index: -1;
+        }
+
+        .highlight {
+            color: #FF6B6B;
+            font-weight: 500;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .highlight::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptLTIgMTVsLTUtNSAxLjQxLTEuNDFMMTAgMTQuMTdsNy41OS03LjU5TDE5IDhsLTkgOXoiIGZpbGw9IiNmZjZiNmIiLz48L3N2Zz4=') no-repeat;
+            margin-right: 10px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, 
+                rgba(255,107,107,0.2) 0%, 
+                rgba(255,212,184,0.5) 50%, 
+                rgba(255,107,107,0.2) 100%);
+            margin: 30px 0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color: #E5E5E7;
+            }
+            body {
+                background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2F 100%);
+            }
+            .container {
+                background: rgba(45,45,47,0.92);
+                box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            }
+            .section {
+                background: linear-gradient(145deg, 
+                    rgba(45,45,47,0.3), 
+                    rgba(30,30,32,0.3));
+                border-color: rgba(255,255,255,0.1);
+            }
+            .highlight {
+                color: #FF9966;
+            }
+            .highlight::before {
+            filter: hue-rotate(20deg) brightness(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 章节1 -->
+        <div class="section">
+            <div class="highlight">其实每次听你说这些，我都特别心疼</div>
+            <p>能感觉到你心里两个声音在打架<br>一边想逼自己再坚持一下，另一边实在是不想工作。<br>这种自己和自己较劲的难受，我懂的。</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- 章节2 -->
+        <div class="section">
+            <div class="highlight">你已经在很努力对抗这些了</div>
+            <p>嘴上说着"不想工作"，半夜还是打开连麦；<br>明明身体也有点不舒服了，还在想着努力一下。<br>光是每天挣扎着起来面对这些，就已经特别特别厉害了。</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- 章节3 -->
+        <div class="section">
+            <div class="highlight">那些抗拒的瞬间都是真实的痛苦</div>
+            <p>害怕一旦停下就会前功尽弃，<br>又不想面对空洞的等待和情绪轰炸，<br>这种两难就像站在悬崖边找平衡点。</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- 章节4 -->
+        <div class="section">
+            <div class="highlight">矛盾恰恰说明你在认真生活</div>
+            <p>真正放弃的人不会自我责备，<br>而你即使在最不想工作的时候，<br>还在挣扎着想要变好。</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- 章节5 -->
+        <div class="section">
+            <div class="highlight">不必在坚持和躺平之间二选一</div>
+            <p>当身体发出预警时，允许自己调节强度；<br>状态回升时再稳步加码，<br>这不是妥协，而是给成长留出呼吸空间。</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- 章节6 -->
+        <div class="section" style="animation: breath 4s ease-in-out infinite;">
+            <div class="highlight">我在这里</div>
+            <p>你不需要向我证明什么<br>无论你选择咬牙多走一程，还是决定按下暂停键恢复能量<br>那个在深夜较劲的身影，已经比昨天的你更勇敢</p>
+        </div>
+    </div>
+</body>
+</html>
